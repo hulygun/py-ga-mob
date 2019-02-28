@@ -210,7 +210,7 @@ class Request(GIFRequest):
             x10.clear_key(self.X10_CUSTOMVAR_VALUE_PROJCT_ID)
             x10.clear_key(self.X10_CUSTOMVAR_SCOPE_PROJECT_ID)
 
-            for cvar in custom_vars.itervalues():
+            for cvar in custom_vars.values():
                 name = utils.encode_uri_components(cvar.name)
                 value = utils.encode_uri_components(cvar.value)
                 x10.set_key(
